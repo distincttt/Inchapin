@@ -121,7 +121,7 @@
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
    top: -16px;
-   font-size: 12px;
+   font-size: 14px;
    color: #2f80ed;
 }
 

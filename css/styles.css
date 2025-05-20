@@ -527,8 +527,8 @@ input {
       min-height: 313px;
       width: 100%;
       height: auto;
-      background-image: url("/assets/images/hero-image5.png");
-      background-size: cover;
+      background-image: url("/assets/images/hero-image4.png");
+      background-size: 100%;
    }
 
    .hero-logo {
