@@ -1,0 +1,36 @@
+<div class="modal" id="callbackModal">
+   <div class="modal__overlay"></div>
+   <button class="modal__close"></button>
+   <div class="modal__container">
+      <h2 class="modal__header">ЗАКАЗАТЬ ЗВОНОК</h2>
+      <form class="modal__form" id="callbackForm">
+         <div class="form-group">
+            <input type="text" id="name" name="name" class="form-input" required placeholder=" " />
+            <label for="name" class="form-label">ВАШЕ ИМЯ</label>
+         </div>
+
+         <div class="form-group">
+            <input type="tel" id="phone" name="phone" class="form-input" required placeholder=" " />
+            <label for="phone" class="form-label">ТЕЛЕФОН</label>
+         </div>
+
+         <div class="form-group">
+            <input
+               type="email"
+               id="email"
+               name="email"
+               class="form-input"
+               required
+               placeholder=" "
+            />
+            <label for="email" class="form-label">E-MAIL</label>
+         </div>
+
+         <p class="form-disclaimer">
+            Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
+            политикой конфиденциальности
+         </p>
+         <button type="submit" class="submit-button">ОТПРАВИТЬ</button>
+      </form>
+   </div>
+</div>

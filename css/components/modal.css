@@ -1,0 +1,155 @@
+/* Modal */
+.modal {
+   position: fixed;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 2;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease, visibility 0.3s ease;
+   pointer-events: none;
+}
+
+.modal.show {
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+}
+
+.modal__overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+}
+
+.modal__container {
+   max-width: 454px;
+   transform: translateY(20px);
+   transition: transform 0.3s ease;
+}
+
+.modal.show .modal__container {
+   transform: translateY(0);
+}
+
+.modal__header {
+   font-size: 40px;
+   line-height: 120%;
+   font-weight: 500;
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.modal__close {
+   position: absolute;
+   top: 60px;
+   right: 60px;
+   width: 26px;
+   height: 26px;
+   cursor: pointer;
+   background: transparent;
+   border: none;
+}
+
+.modal__close::before,
+.modal__close::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   height: 1px; /* Толщина линий крестика */
+   background-color: #000; /* Цвет крестика */
+}
+
+.modal__close::before {
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__close::after {
+   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal__close:hover {
+   color: #111;
+}
+
+.modal__form {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.form-group {
+   position: relative;
+   margin-bottom: 30px;
+}
+
+.form-input {
+   width: 100%;
+   padding: 12px 0;
+   border: none;
+   border-bottom: 1px solid #e0e0e0;
+   font-size: 16px;
+   line-height: 160%;
+   transition: border-color 0.3s;
+   background: transparent;
+}
+
+.form-input:focus {
+   outline: none;
+   border-color: #2f80ed;
+}
+
+.form-label {
+   position: absolute;
+   top: 12px;
+   left: 0;
+   font-size: 16px;
+   color: #111;
+   pointer-events: none;
+   transition: all 0.3s ease;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+   top: -16px;
+   font-size: 12px;
+   color: #2f80ed;
+}
+
+.form-disclaimer {
+   text-align: center;
+   margin-top: 40px;
+   font-size: 12px;
+   line-height: 140%;
+   color: #999;
+   margin-bottom: 24px;
+}
+
+.submit-button {
+   display: block;
+   margin: 0 auto;
+   padding: 24px 69px;
+   background-color: #2f80ed;
+   color: white;
+   border: none;
+   border-radius: 100px;
+   font-size: 14px;
+   letter-spacing: 0.07em;
+   font-weight: 600;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   text-transform: uppercase;
+}
+
+.submit-button:hover {
+   background-color: #1c6ed9;
+}
